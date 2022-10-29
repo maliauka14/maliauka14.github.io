@@ -1,0 +1,78 @@
+/* при размере больше моего экрана просто делать отступы wrapper больше
+    только в интро с картинкой разобраться и со слонами
+*/
+
+
+
+
+/* mobile s */
+
+
+/* mobile m */
+
+
+/* mobile l */
+
+
+/* tablet */
+
+
+/* laptop */
+
+
+/* laptop l */
+
+
+/* 4k */
+
+/* 
+
+@media(min-width:1900px) {
+    .wrapper {
+        width: 1420px;
+    }
+
+}
+
+
+.description_text,
+.tickets_text,
+.become_partner_text {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.description_data,
+.tickets_data,
+.become_partner_data,
+.question_text {
+    display: block;
+}
+
+.left_data,
+.rigth_data {
+    width: 100%;
+}
+
+.tickets_cost,
+.tickets_price_description,
+.credentials {
+    margin: 0 auto;
+}
+
+.tickets_description {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.question_text .left_text,
+.rigth_text {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+*/
