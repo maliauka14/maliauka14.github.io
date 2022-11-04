@@ -1,4 +1,35 @@
+
+window.onload = function () {
+    let preloader = document.querySelector('#preloader');
+
+    preloader.classList.add('hide-preloader');
+    setTimeout(function () {
+        preloader.classList.add('preloader-hidden');
+
+    }, 990);
+}
+
+
 window.addEventListener('DOMContentLoaded', function () {
+
+    //preloader
+
+    // const mediaFiles = document.querySelectorAll('img, video');
+    // let i = 0
+    // document.body.style.overflow = 'hidden';
+    // Array.from(mediaFiles).forEach((file, index) => {
+    //     file.onload = () => {
+    //         i++
+    //         percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1)
+
+    //         if (i === mediaFiles.length - 2) {
+    //             document.body.style.overflow = '';
+    //             preloader.classList.add('preloader--hide')
+    //             percents.innerHTML = 100
+    //         }
+    //     }
+    // })
+
 
 
     //buttons
@@ -114,9 +145,24 @@ window.addEventListener('DOMContentLoaded', function () {
                 correctEmail = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i.test(email.value),
                 correctLastName = lastName.value.length >= 2;
             if (correctEmail && correctFirstName && correctLastName) {
-                window.open('https://bezkassira.by/i-belorusskij-forum-osoznannoe-roditelstvo-19832/buy/', "_blank");
-                button.classList.add('active_credential_button');
-                button.innerHTML = "Отправлено";
+                response = fetch('some_url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    },
+                    body: JSON.stringify({
+                        correctFirstName: correctFirstName,
+                        correctEmail: correctEmail,
+                        correctLastName: correctLastName
+                    })
+                });
+
+                if (response.ok) {
+                    button.classList.add('active_credential_button');
+                    button.innerHTML = "Отправлено";
+                } else alert("Ошибка HTTP: " + response.status);
+
+
             } else {
                 if (!correctFirstName) firstName.style.border = "4px solid #d84646";
                 if (!correctEmail) email.style.border = "4px solid #d84646";
@@ -156,6 +202,28 @@ window.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = '';
         }
     });
+
+    modal.addEventListener("touchstart", startTouch, false);
+    modal.addEventListener("touchmove", moveTouch, false);
+
+    let initialY = null;
+
+    function startTouch(e) { initialY = e.touches[0].clientY };
+
+    function moveTouch(e) {
+        if (initialY === null) return;
+
+        let currentY = e.touches[0].clientY;
+        let diffY = initialY - currentY;
+
+        if (Math.abs(diffY) > 40) {
+            modal.classList.remove('show');
+            modal.innerHTML = '';
+            document.body.style.overflow = '';
+        }
+
+        initialY = null;
+    }
 
     // video
 
@@ -232,61 +300,100 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //become partner
 
-    function sendRequest(buttonSelector, type) {
-        const partnerButton = document.querySelector(buttonSelector),
-            mail = 'malyavko14@bk.ru',
-            subject = {
-                partner: "Хочу стать партнёром",
-                officialPartner: "Хочу стать официальным партнёром",
-                generalPartner: "Хочу стать генеральным партнёром"
-            };
-        partnerButton.addEventListener('click', () => {
-            modal.classList.add('show');
+    const partnerButton = document.querySelectorAll(".send_request"),
+        mail = 'malyavko14@bk.ru',
+        modal_send_request = document.querySelector(".modal_send_request"),
+        requestButton = document.querySelector("#request_button");
+
+    let type;
+
+    partnerButton.forEach(button => {
+        button.addEventListener('click', () => {
+            modal_send_request.classList.add('show');
             document.body.style.overflow = 'hidden';
-            modal.innerHTML = `
-                <div class="modal_dialog">
-                    <div class="credentials_title">Заполните контактные данные</div>
-                            <input id="request_company_name" class="input_field" type="name" placeholder="Название компании">
-                            <input id="request_contact_name" class="input_field" type="phone" placeholder="Контактное лицо">
-                            <input id="request_phone" class="input_field" type="email" placeholder="Телефон">
-                            <button id="request_button" class="credential_button">Отправить</button>
-                    </div>`;
+            type = button.id
         })
+    })
 
-        // const button = document.querySelector("#request_button")
-        // button.addEventListener('click', () => {
-        //     const companyName = document.querySelector("#request_company_name"),
-        //         contactName = document.querySelector("#request_contact_name"),
-        //         phone = document.querySelector("#request_phone");
+    modal_send_request.addEventListener('click', (e) => {
+        if (e.target === modal_send_request) {
+            modal_send_request.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
 
-        //     companyName.addEventListener("click", () => companyName.style.border = '');
-        //     contactName.addEventListener("click", () => contactName.style.border = '');
-        //     phone.addEventListener("click", () => phone.style.border = '');
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal_send_request.classList.contains('show')) {
+            modal_send_request.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
+
+    modal_send_request.addEventListener("touchstart", startTouch, false);
+    modal_send_request.addEventListener("touchmove", moveTouch, false);
+
+    requestButton.addEventListener('click', () => {
+        const companyName = document.querySelector("#request_company_name"),
+            contactName = document.querySelector("#request_contact_name"),
+            phone = document.querySelector("#request_phone"),
+            subject = {
+                partner_button: "Хочу стать партнёром форума Осознанное родительство",
+                official_partner_button: "Хочу стать официальным партнёром форума Осознанное родительство",
+                general_partner_button: "Хочу стать генеральным партнёром форума Осознанное родительство"
+            };
+
+        companyName.addEventListener("click", () => companyName.style.border = '');
+        contactName.addEventListener("click", () => contactName.style.border = '');
+        phone.addEventListener("click", () => phone.style.border = '');
 
 
-        //     let correctCompanyName = companyName.value.length >= 3 ,
-        //         correctPhone = /(?:\+|\d)[\d\-\(\) ]{9,}\d/g.test(phone.value),
-        //         correctContactName = contactName.value.length >= 2;
-        //     if (correctPhone && correctCompanyName && correctContactName) {
-        //         modal.classList.remove('show');
-        //         modal.innerHTML = '';
-        //         document.body.style.overflow = '';
-        //         let text = `
-        //             Добрый день. Наша компания хочет поддержать ваш проект осозданное родительство.
-        //             Наш УПН:${companyName.value}.
-        //             Для связи с нами просим набрать на номер ${phone.value}, контактное лицо - ${contactName.value}.
-        //             Спасибо.                    
-        //         `
-        //         window.open(`mailto:${mail}?subject=${subject[type]}&body=${text}`, "_blank");
-        //     } else {
-        //         if (!correctCompanyName) companyName.style.border = "4px solid #d84646";
-        //         if (!correctPhone) phone.style.border = "4px solid #d84646";
-        //         if (!correctContactName) contactName.style.border = "4px solid #d84646";
-        //     }
-        // })
-    }
+        let correctCompanyName = companyName.value.length >= 3,
+            correctPhone = /(?:\+|\d)[\d\-\(\) ]{9,}\d/g.test(phone.value),
+            correctContactName = contactName.value.length >= 2;
+        if (correctPhone && correctCompanyName && correctContactName) {
+            modal.classList.remove('show');
+            modal.innerHTML = '';
+            document.body.style.overflow = '';
+            let text = `Добрый день. Наша компания хочет поддержать ваш проект осозданное родительство.
+            \nНаша компания: ${companyName.value}.
+            \nДля связи с нами просим набрать на номер ${phone.value}, контактное лицо: ${contactName.value}.
+            \nСпасибо.`;
 
-    sendRequest("#partner_button", 'partner');
-    sendRequest("#official_partner_button", 'officialPartner');
-    sendRequest("#general_partner_button", 'generalPartner');
+            modal_send_request.classList.remove('show');
+            document.body.style.overflow = '';
+
+            window.open(`mailto:${mail}?subject=${subject[type]}&body=${encodeURIComponent(text)}`, "_blank");
+
+        } else {
+            if (!correctCompanyName) companyName.style.border = "4px solid #d84646";
+            if (!correctPhone) phone.style.border = "4px solid #d84646";
+            if (!correctContactName) contactName.style.border = "4px solid #d84646";
+        }
+
+    });
+
+
+    //hamburger
+
+    const menu = document.querySelector('.header_menu'),
+        menuItem = document.querySelectorAll('.nav_element'),
+        hamburger = document.querySelector('.hamburger');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('header_menu_active');
+    });
+
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            menu.classList.toggle('header_menu_active');
+        })
+    })
+
 });
+
+
+
+
+

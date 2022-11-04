@@ -7,7 +7,7 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     background-color: #e9e7e2;
     font-style: normal;
-    min-width: 1864;
+    /* min-width: 1864px; */
 }
 
 h2 {
@@ -17,7 +17,8 @@ h2 {
 }
 
 .wrapper {
-    width: 75%;
+    max-width: 1360px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -116,6 +117,12 @@ header {
     line-height: 20px;
 }
 
+.header_menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .logo_img {
     position: absolute;
     right: -76px;
@@ -128,7 +135,6 @@ header {
     font-size: 14px;
     line-height: 17px;
     color: #1D1C1B;
-    margin-right: 16px;
     cursor: pointer;
     text-decoration: none;
 }
@@ -137,8 +143,7 @@ header {
     color: #fff;
 }
 
-.nav_element:last-child {
-    margin-right: 0;
+.nav_element_button {
     padding: 20px 44px;
     font-weight: 600;
     font-size: 16px;
@@ -148,10 +153,11 @@ header {
     background-color: transparent;
 }
 
-.nav_element:last-child:hover {
+.nav_element_button:hover {
     background-color: #fff;
     color: #1D1C1B
 }
+
 
 /* ==================== END HEADER ====================*/
 
@@ -323,7 +329,6 @@ header {
     line-height: 123.02%;
     text-align: center;
     color: #2C2C2C;
-
 }
 
 
@@ -510,6 +515,7 @@ input[id="radio-7"]:checked~.theory_active {
     line-height: 49px;
 }
 
+
 .own_theory_text {
     margin-top: 24px;
     width: 580px;
@@ -521,7 +527,6 @@ input[id="radio-7"]:checked~.theory_active {
 
 .own_theory_image {
     width: 584px;
-    height: 560px;
 }
 
 .own_theory_left_data {
@@ -670,7 +675,6 @@ input[id="radio-7"]:checked~.theory_active {
     color: #2C2C2C;
     font-weight: 500;
     margin-bottom: 75px;
-    ;
 }
 
 .schedule_data .time {
@@ -753,15 +757,16 @@ input[id="radio-7"]:checked~.theory_active {
 }
 
 .tickets_text {
+    width: 930px;
     margin: 0 auto;
     margin-top: 30px;
-    width: 1076px;
     font-weight: 400;
     font-size: 20px;
     line-height: 123.02%;
     text-align: center;
     color: #2C2C2C;
 }
+
 
 .tickets_data {
     display: flex;
@@ -773,6 +778,10 @@ input[id="radio-7"]:checked~.theory_active {
 .tickets_info {
     margin-left: 65px;
     margin-right: 140px;
+}
+
+.tickets_block {
+    margin: 0 auto;
 }
 
 .tickets_cost {
@@ -959,7 +968,7 @@ input:-ms-input-placeholder {
 .become_partner_text {
     margin: 0 auto;
     margin-top: 30px;
-    width: 1076px;
+    width: 930px;
     font-weight: 400;
     font-size: 20px;
     line-height: 123.02%;
@@ -1023,7 +1032,7 @@ input:-ms-input-placeholder {
 .own_partner_sentence .send_request {
     background: #DEB47D;
     border-radius: 200px;
-    padding: 23px 80px;
+    padding: 23px 60px;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -1033,6 +1042,7 @@ input:-ms-input-placeholder {
     margin-top: 25px;
     margin-bottom: 50px;
     cursor: pointer;
+    width: 80%;
 }
 
 .own_partner_sentence .send_request:hover {
@@ -1077,7 +1087,6 @@ input:-ms-input-placeholder {
 }
 
 .map_info {
-
     margin: auto;
     position: absolute;
     top: 0;
@@ -1139,6 +1148,7 @@ input:-ms-input-placeholder {
 }
 
 .photo_list {
+    margin: 0 auto;
     margin-top: 80px;
     padding-bottom: 85px;
     border-bottom: 1px solid #CCD3C4;
@@ -1294,7 +1304,6 @@ input:-ms-input-placeholder {
     font-size: 16px;
     line-height: 98.9%;
     color: #1E1C1B;
-
 }
 
 .supervisor {
@@ -1328,7 +1337,10 @@ footer {
 
 .column {
     margin-right: 95px;
+}
 
+.column:last-child{
+    margin-right: 0;
 }
 
 .column .column_title {
@@ -1471,3 +1483,130 @@ footer {
 }
 
 /* ==================== END BACKGROUNG IMAGES ====================*/
+
+
+
+
+/* ==================== START PRELOADER ====================*/
+
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e9e7e2;
+    z-index: 1000;
+    transition: all .09s ease-out;
+}
+
+.preloader--hide {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.preloader__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#preloader.hide-preloader {
+    animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+    display: none;
+}
+
+/* .preloader__percents {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+
+@keyframes ldio-lrl29zh6csj {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.ldio-lrl29zh6csj div {
+    box-sizing: border-box !important
+}
+
+.ldio-lrl29zh6csj>div {
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    top: 31px;
+    left: 31px;
+    border-radius: 50%;
+    border: 10px solid #000;
+    border-color: #ccd3c4 transparent #ccd3c4 transparent;
+    animation: ldio-lrl29zh6csj 1s linear infinite;
+}
+
+.ldio-lrl29zh6csj>div:nth-child(2) {
+    border-color: transparent
+}
+
+.ldio-lrl29zh6csj>div:nth-child(2) div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+}
+
+.ldio-lrl29zh6csj>div:nth-child(2) div:before,
+.ldio-lrl29zh6csj>div:nth-child(2) div:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    left: 54px;
+    background: #ccd3c4;
+    border-radius: 50%;
+    box-shadow: 0 128px 0 0 #ccd3c4;
+}
+
+.ldio-lrl29zh6csj>div:nth-child(2) div:after {
+    left: -10px;
+    top: 54px;
+    box-shadow: 128px 0 0 0 #ccd3c4;
+}
+
+.loadingio-spinner-dual-ring-2xdrs6n4x0t {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0);
+}
+
+.ldio-lrl29zh6csj {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-lrl29zh6csj div {
+    box-sizing: content-box;
+}
+
+
+/* ==================== END PRELOADER ====================*/

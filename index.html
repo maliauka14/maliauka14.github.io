@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="img/svg/elephant.svg" />
+    <link rel="icon" href="img/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1864">
+    <!-- <meta name="viewport" content="width=1864"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Web site about parentship" />
     <meta name="theme-color" content="#e9e7e2" />
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -18,6 +19,18 @@
 
 
 <body>
+    <div id="preloader" class="preloader">
+        <div class="preloader__loader">
+            <div class="loadingio-spinner-dual-ring-2xdrs6n4x0t">
+                <div class="ldio-lrl29zh6csj">
+                    <div></div>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <section class="intro">
             <header>
@@ -30,13 +43,19 @@
                         <img class="logo_img" src="img/svg/elephant.svg" alt="logo">
                     </div>
                     <nav>
-                        <a href="#speakers" class="nav_element">СПИКЕРЫ</a>
-                        <a href="#schedule" class="nav_element">ПРОГРАММА</a>
-                        <a href="#map" class="nav_element">МЕСТО ПРОВЕДЕНИЯ</a>
-                        <a href="#photo" class="nav_element">ФОРУМ 2020</a>
-                        <a href="#become_partner" class="nav_element">СТАТЬ ПАРТНЕРОМ</a>
-                        <a href="#questions" class="nav_element">СВЯЗАТЬСЯ С НАМИ</a>
-                        <a href="#buy_ticket" class="nav_element">КУПИТЬ БИЛЕТ</a>
+                        <div class="header_menu">
+                            <a href="#speakers" class="nav_element">СПИКЕРЫ</a>
+                            <a href="#schedule" class="nav_element">ПРОГРАММА</a>
+                            <a href="#map" class="nav_element">МЕСТО ПРОВЕДЕНИЯ</a>
+                            <a href="#photo" class="nav_element">ФОРУМ 2020</a>
+                            <a href="#become_partner" class="nav_element">СТАТЬ ПАРТНЕРОМ</a>
+                            <a href="#buy_ticket" class="nav_element nav_element_button">КУПИТЬ БИЛЕТ</a>
+                        </div>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </nav>
                 </div>
             </header>
@@ -622,40 +641,44 @@
         <section class="tickets relative_section" id="buy_ticket">
             <img class="background_image elephant_tickets" src="img/background/elephant_tickets.svg" alt="background">
             <div class="wrapper">
-                <h2 class="tickets_title">Купить билет</h2>
-                <div class="tickets_text">Мы создадим качественный продукт и сделаем так, чтобы форум стал массовым.
-                    Хотим, чтобы каждый родитель покидал наше мероприятие с багажом знаний
-                    и в состоянии спокойствия за себя и своего ребенка.</div>
+                <div class="tickets_block">
+                    <h2 class="tickets_title">Купить билет</h2>
+                    <div class="tickets_text">Мы создадим качественный продукт и сделаем так, чтобы форум стал массовым.
+                        Хотим, чтобы каждый родитель покидал наше мероприятие с багажом знаний
+                        и в состоянии спокойствия за себя и своего ребенка.</div>
 
-                <div class="tickets_data">
-                    <div class="tickets_info">
-                        <div class="tickets_cost">
-                            <div>Стоимость билета</div>
-                            <div class="tickets_sum">97 руб.</div>
-                        </div>
+                    <div class="tickets_data">
+                        <div class="tickets_info">
+                            <div class="tickets_cost">
+                                <div>Стоимость билета</div>
+                                <div class="tickets_sum">97 руб.</div>
+                            </div>
 
-                        <div class="tickets_price_description">
-                            <div class="title">В билет входит:</div>
-                            <ol>
-                                <li>Кофе-брейки;</li>
-                                <li>Раздаточный материал в виде конспекта лекций.</li>
-                            </ol>
-                        </div>
+                            <div class="tickets_price_description">
+                                <div class="title">В билет входит:</div>
+                                <ol>
+                                    <li>Кофе-брейки;</li>
+                                    <li>Раздаточный материал в виде конспекта лекций.</li>
+                                </ol>
+                            </div>
 
-                        <div class="tickets_description">
-                            Стоимость <b>консультации</b> каждого из специалистов, которые являются нашими спикерами, -
-                            от <b>60 руб</b>.
-                            Поскольку в форуме участвуют пять экспертов, посетитель имеет возможность прослушать каждого
-                            из
-                            них, <b>сэкономив</b> в итоге <b>более 200 руб.</b>
+                            <div class="tickets_description">
+                                Стоимость <b>консультации</b> каждого из специалистов, которые являются нашими
+                                спикерами, -
+                                от <b>60 руб</b>.
+                                Поскольку в форуме участвуют пять экспертов, посетитель имеет возможность прослушать
+                                каждого
+                                из
+                                них, <b>сэкономив</b> в итоге <b>более 200 руб.</b>
+                            </div>
                         </div>
-                    </div>
-                    <div class="credentials">
-                        <div class="credentials_title">Заполните контактные данные</div>
-                        <input id="request_first_name" class="input_field" type="name" placeholder="Имя">
-                        <input id="request_last_name" class="input_field" type="phone" placeholder="Фамилия">
-                        <input id="request_email" class="input_field" type="email" placeholder="Электронная почта">
-                        <button class="credential_button">Отправить</button>
+                        <div class="credentials">
+                            <div class="credentials_title">Заполните контактные данные</div>
+                            <input id="request_first_name" class="input_field" type="name" placeholder="Имя">
+                            <input id="request_last_name" class="input_field" type="phone" placeholder="Фамилия">
+                            <input id="request_email" class="input_field" type="email" placeholder="Электронная почта">
+                            <button class="credential_button">Отправить</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -855,6 +878,16 @@
 
             <div class="modal">
                 <div class="modal_dialog">
+                </div>
+            </div>
+
+            <div class="modal modal_send_request">
+                <div class="modal_dialog">
+                    <div class="credentials_title">Заполните контактные данные</div>
+                    <input id="request_company_name" class="input_field" type="name" placeholder="Название компании">
+                    <input id="request_contact_name" class="input_field" type="phone" placeholder="Контактное лицо" />
+                    <input id="request_phone" class="input_field" type="email" placeholder="Телефон" />
+                    <button id="request_button" class="credential_button">Отправить</button>
                 </div>
             </div>
 
