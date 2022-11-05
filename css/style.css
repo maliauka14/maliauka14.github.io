@@ -536,7 +536,6 @@ input[id="radio-7"]:checked~.theory_active {
 .left_data_image {
     width: 41px;
     height: 47px;
-    margin-top: 100px;
     margin: 100px 38px 0 40px;
 }
 
@@ -773,12 +772,9 @@ input[id="radio-7"]:checked~.theory_active {
     margin-top: 60px;
     padding-bottom: 90px;
     border-bottom: 1px solid #CCD3C4;
+    justify-content: space-between;
 }
 
-.tickets_info {
-    margin-left: 65px;
-    margin-right: 140px;
-}
 
 .tickets_block {
     margin: 0 auto;
@@ -832,9 +828,7 @@ input[id="radio-7"]:checked~.theory_active {
     color: #2C2C2C;
 }
 
-.credentials {
-    margin-right: 65px;
-}
+
 
 .credentials_title {
     margin-top: 23px;

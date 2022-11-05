@@ -1,30 +1,29 @@
 /* header {display: none;} */
 /*вроде готово*/
 
-.intro {
+/* .intro {
     display: none;
-}
+} */
 
 /* .description {
     display: none;
 } */
 
-.theory {
-    /*  готово но не совсем */
+/* .theory {
     display: none;
-}
+} */
 
 .speakers {
     display: none;
 }
 
-.schedule {
+/* .schedule {
     display: none;
-}
+} */
 
-.tickets {
+/* .tickets {
     display: none;
-}
+} */
 
 .partnership {
     display: none;
@@ -76,9 +75,26 @@
     }
 }
 
-@media screen and (max-width:970px) {
+@media screen and (max-width:1070px) {
+    .logo_lower_text {
+        font-size: 8px;
+    }
 
-    /* header */
+    .logo_upper_text {
+        font-size: 12px;
+    }
+
+    .nav_element {
+        font-size: 10px;
+    }
+
+    .nav_element_button {
+        padding: 12px 28px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:970px) {
     .header_menu {
         display: none;
     }
@@ -92,7 +108,7 @@
 
     .hamburger span {
         display: block;
-        border-radius: 30%;
+        border-radius: 2px;
         height: 4px;
         width: 100%;
         margin-bottom: 4px;
@@ -125,7 +141,7 @@
         display: block;
         width: 100%;
         height: 100vh;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         display: flex;
@@ -155,12 +171,139 @@
     }
 }
 
+@media screen and (max-width:500px) {
+    .logo_upper_text {
+        line-height: 16px;
+    }
+        
+    .logo_img {
+        position: absolute;
+        right: -64px;
+        width: 70px;
+        height: 44px;
+    }
+}
 
 /* ======================= END HEADER ======================= */
 
 
 
 /* ======================= START INTRO ======================= */
+@media screen and (max-width:1200px) {
+    .intro_title{
+        font-size: 42px;
+    }
+
+    .intro_date{
+        font-size: 28px;
+    }
+
+    .intro_subtitle{
+        font-size: 18px;
+    }
+
+    .intro_button{
+        padding: 22px 78px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:970px) {
+    .intro{
+        background: #dedede
+    }
+
+    .intro_title{
+        font-size: 36px;
+        line-height: 40px;
+        width: 100%;
+    }
+
+    .intro_date{
+        font-size: 24px;
+    }
+
+    .intro_subtitle{
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .intro_button{
+        padding: 20px 74px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:780px) {
+
+    .intro_title{
+        font-size: 30px;
+        line-height: 36px;
+        width: 100%;
+    }
+
+    .intro_date{
+        font-size: 20px;
+    }
+
+    .intro_subtitle{
+        font-size: 14px;
+        width:100%;
+    }
+
+    .intro_button{
+        padding: 18px 70px;
+        font-size: 16px;
+    }
+
+    .organizator_logo{
+        width: 48px;
+        height: 48px;
+    }
+
+    .organizator_name{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    /* .intro{
+        background: #fefefe
+    } */
+
+    .intro_title{
+        font-size: 26px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    .intro_date{
+        font-size: 20px;
+    }
+
+    .intro_subtitle{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .intro_button{
+        padding: 12px 56px;
+        width: 80%;
+        font-size: 12px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .organizators{
+        display: block;
+    }
+
+    .organizator{
+        margin-bottom: 10px;
+    }
+}
 
 /* ======================= END INTRO ======================= */
 
@@ -284,13 +427,206 @@
 
 /* ======================= START SCHEDULE ======================= */
 
+@media screen and (max-width:1400px) {
+    .schedule_data {
+        margin: 70px 20px 0 20px;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .schedule_data {
+        margin: 70px 70px 0 70px;
+    }
+
+    .schedule_data .own_element {
+        border-radius: 140px;
+        width: 322px;
+        height: 70px;
+    }
+
+    .schedule_data .time {
+        font-size: 32px;
+    }
+
+    .schedule_data .description {
+        font-size: 18px;
+    }
+
+    .schedule_data .circle {
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width:970px) {
+    .schedule_data {
+        margin: 70px 120px 0 120px;
+    }
+
+    .schedule_data .own_element {
+        border-radius: 84px;
+        width: 193px;
+        height: 42px;
+        margin-bottom: 50px;
+    }
+
+    .schedule_data .time {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .schedule_data .description {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .schedule_data .circle {
+        margin-top: 12px;
+    }
+
+    .schedule_data .circle::before {
+        height: 20px;
+    }
+
+    .schedule_data .circle::after {
+        height: 85px;
+    }
+
+}
+
+
+@media screen and (max-width:720px) {
+    .schedule_data {
+        margin: 70px 20px 0 20px;
+    }
+
+    .schedule_data .own_element {
+        margin-bottom: 40px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .schedule_data {
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+
+    .schedule_data .own_element {
+        border-radius: 67px;
+        width: 120px;
+        height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .schedule_data .time {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .schedule_data .description {
+        font-size: 8px;
+        line-height: 20px;
+    }
+
+    .schedule_data .circle {
+        margin-top: 9px;
+    }
+
+    .schedule_data .circle::before {
+        height: 10px;
+        width: 3px;
+    }
+
+    .schedule_data .circle::after {
+        height: 35px;
+        width: 3px;
+    }
+}
+
+
 /* ======================= END SCHEDULE ======================= */
 
 
 
-/* ======================= START DESCRIPTION ======================= */
+/* ======================= START PARTNERSHIP ======================= */
+@media screen and (max-width:1200px) {
+    .input_field {
+        width: 350px;
+    }
 
-/* ======================= END DESCRIPTION ======================= */
+    .credentials_title {
+        font-size: 20px;
+    }
+
+    .tickets_description {
+        font-size: 18px;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:970px) {
+
+    .tickets_text,
+    .tickets_description {
+        width: 80%;
+    }
+
+    .tickets_data {
+        display: block;
+    }
+
+    .tickets_price_description {
+        width: 50%;
+    }
+
+    .credentials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tickets_cost {
+        padding: 18px 56px;
+        border-radius: 100px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .tickets_text {
+        font-size: 16px;
+    }
+
+    .tickets_description {
+        margin-left: 0;
+    }
+
+    .input_field,
+    .credential_button {
+        width: 90%;
+    }
+
+    .tickets_price_description {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .tickets_cost {
+        padding: 10px 56px;
+        border-radius: 100px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .credentials_title {
+        text-align: center;
+    }
+}
+
+/* ======================= END PARTNERSHIP ======================= */
 
 
 
@@ -347,10 +683,10 @@
     }
 }
 
-@media screen and (max-width:920px) {
+@media screen and (max-width:500px) {
 
     .own_partner_sentence {
-        width: 300px;
+        width: 100%;
     }
 
 }
@@ -380,7 +716,7 @@
     }
 
     .map_info {
-        bottom: 1%;
+        bottom: 3%;
         top: auto;
         left: 50%;
         transform: translate(-50%, 0);
@@ -396,7 +732,7 @@
     }
 
     .map_info {
-        bottom: 1%;
+        bottom: 3%;
         top: auto;
         left: 50%;
         padding: 0 35px;
@@ -762,11 +1098,6 @@
         width: 534px;
         height: 510px;
     }
-
-    /* schedule */
-    .schedule_data {
-        margin: 70px 20px 0 20px;
-    }
 }
 
 
@@ -812,55 +1143,10 @@
         width: 384px;
         height: 360px;
     }
-
-
-    /* shedule */
-    .schedule_data {
-        padding-bottom: 60px;
-        margin: 70px 60px 0 60px;
-    }
-
-    .schedule_data .own_element {
-        border-radius: 140px;
-        width: 322px;
-        height: 70px;
-    }
-
-    .schedule_data .time {
-        font-size: 32px;
-    }
-
-    .schedule_data .description {
-        font-size: 18px;
-    }
-
-    .schedule_data .circle {
-        margin-top: 25px;
-    }
-
 }
 
 
 @media screen and (max-width:1070px) {
-
-    /* header */
-    .logo_lower_text {
-        font-size: 8px;
-    }
-
-    .logo_upper_text {
-        font-size: 12px;
-    }
-
-    .nav_element {
-        font-size: 10px;
-    }
-
-    .nav_element_button {
-        padding: 12px 28px;
-        font-size: 12px;
-    }
-
     /* theory */
 
     .own_theory_text {
@@ -878,91 +1164,27 @@
 
 @media screen and (max-width:970px) {
 
-    /* header */
-    .header_menu {
-        display: none;
-    }
-
-    .hamburger {
-        width: 30px;
-        height: 18px;
-        cursor: pointer;
-        margin-right: 20px;
-    }
-
-    .hamburger span {
-        display: block;
-        border-radius: 30%;
-        height: 4px;
-        width: 100%;
-        margin-bottom: 4px;
-        transition: 0.5s all;
-        background-color: #1E1C1B;
-    }
-
-    .hamburger_active {
-        z-index: 20;
-    }
-
-    .hamburger_active span {
-        margin-bottom: -2px;
-        background-color: #fff;
-    }
-
-    .hamburger_active span:nth-child(1) {
-        transform: translateY(3px) rotate(-45deg);
-    }
-
-    .hamburger_active span:nth-child(2) {
-        display: none;
-    }
-
-    .hamburger_active span:nth-child(3) {
-        transform: translateY(3px) rotate(45deg);
-    }
-
-    .header_menu_active {
-        display: block;
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        background-color: black;
-        opacity: 0.8;
-        z-index: 10;
-    }
-
-    .header_item {
-        margin-bottom: 5px;
-    }
-
-    .nav_element {
-        color: #fff;
-
-    }
-
-    .nav_element_button {
-        padding: 0;
-        font-weight: 500;
-        font-size: 10px;
-        line-height: 17px;
-        border: none;
-    }
-
-
     /* theory */
     .own_theory_text {
         width: 100%;
         font-size: 14px;
     }
 
+    .own_theory_left_data{
+        display: block;
+    }
+
+    .left_data_image{   
+        display: block;
+        margin: 10px auto;
+    }
+
     .own_theory_image {
         display: none;
+    }
+
+    .own_theory_title{
+        margin-top: 20px;
     }
 
     .slider_element {
@@ -973,42 +1195,6 @@
     .theory_active {
         height: 50px;
     }
-
-    /* schedule */
-
-    .schedule_data {
-        padding-bottom: 20px;
-        margin: 70px 100px 0 100px;
-    }
-
-    .schedule_data .own_element {
-        border-radius: 84px;
-        width: 193px;
-        height: 42px;
-    }
-
-    .schedule_data .time {
-        font-size: 18px;
-        line-height: 32px;
-    }
-
-    .schedule_data .description {
-        font-size: 12px;
-        line-height: 16px;
-    }
-
-    .schedule_data .circle {
-        margin-top: 12px;
-    }
-
-    .schedule_data .circle::before {
-        height: 20px;
-    }
-
-    .schedule_data .circle::after {
-        height: 85px;
-    }
-
 }
 
 
@@ -1017,7 +1203,7 @@
 
     /* theory */
     .theory_text {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .slider_element {
@@ -1025,6 +1211,9 @@
         font-size: 6px;
     }
 
+    .own_theory_title{
+        font-size: 20px;
+    }
     .theory_active {
         height: 40px;
     }
@@ -1035,13 +1224,45 @@
         height: 10px;
     }
 
+    .own_theory_text{
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 5px;
+    }
+
 }
 
 
 @media screen and (max-width:370px) {
+
     /* theory */
     .theory_text {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .slider_element {
+        height: 20px;
+        font-size: 4px;
+    }
+
+    .theory_active {
+        height: 20px;
+    }
+
+    .theory_active:after {
+        left: calc(50% - 2.5px);
+        width: 5px;
+        height: 5px;
+    }
+
+    .own_theory_text{
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .own_theory_text{
+        font-size: 10px;
+        line-height: 12px;
     }
 
 }
