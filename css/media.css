@@ -1,20 +1,4 @@
-.description {
-    display: none;
-}
-
-.theory {
-    display: none;
-}
-
 .speakers {
-    display: none;
-}
-
-.schedule {
-    display: none;
-}
-
-.tickets {
     display: none;
 }
 
@@ -22,17 +6,72 @@
     display: none;
 }
 
-.become_partner {
+.tickets{
     display: none;
 }
 
-.map {
+.schedule {
     display: none;
 }
 
-.photo {
-    display: none;
+/* ======================= START CONST ======================= */
+@media screen and (max-width:1200px) {
+    .subtitle {
+        width: 90%;
+    }
 }
+
+@media screen and (max-width:970px) {
+    .title {
+        margin-top: 80px;
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .divider {
+        padding-bottom: 70px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .title {
+        margin-top: 60px;
+        font-size: 20px;
+    }
+
+    .subtitle {
+        margin-top: 20px;
+        font-size: 14px;
+        width: 95%;
+    }
+
+    .divider {
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .title {
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .subtitle {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .divider {
+        padding-bottom: 30px;
+    }
+}
+
+
+/* ======================= END CONST ======================= */
 
 
 /* ======================= START HEADER ======================= */
@@ -154,7 +193,7 @@
 }
 
 @media screen and (max-width:500px) {
-    header{
+    header {
         padding-top: 10px;
     }
 
@@ -216,7 +255,7 @@
 @media screen and (max-width:970px) {
     .intro {
         background: #dedede;
-        height: 800px;
+        height: 1000px;
     }
 
     .intro_title {
@@ -273,9 +312,9 @@
 }
 
 @media screen and (max-width:550px) {
-    .intro{
+    .intro {
         background: #fefefe;
-        height: 600px;
+        height: 700px;
     }
 
     .intro_title {
@@ -446,6 +485,163 @@
 
 
 /* ======================= START THEORY ======================= */
+@media screen and (max-width:1400px) {
+    .own_theory_image {
+        width: 534px;
+        height: 510px;
+        display: inline-block;
+        margin: auto 0;
+    }
+}
+
+
+@media screen and (max-width:1300px) {
+    .own_theory_image {
+        width: 454px;
+        height: 430px;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .slider_element {
+        height: 70px;
+        font-size: 12px;
+    }
+
+    .theory_active {
+        height: 70px;
+    }
+
+    .own_theory_title {
+        font-size: 32px;
+    }
+
+    .own_theory_text {
+        width: 480px;
+        font-size: 14px;
+    }
+
+    .own_theory_image {
+        width: 384px;
+        height: 360px;
+    }
+}
+
+
+@media screen and (max-width:1070px) {
+    .own_theory_text {
+        width: 400px;
+        font-size: 14px;
+    }
+
+    .own_theory_image {
+        width: 344px;
+        height: 320px;
+    }
+
+}
+
+
+@media screen and (max-width:970px) {
+    .own_theory_text {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .own_theory_left_data {
+        display: block;
+    }
+
+    .left_data_image {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .own_theory_image {
+        display: none;
+    }
+
+    .own_theory_title {
+        margin-top: 20px;
+    }
+
+    .slider_element {
+        height: 50px;
+        font-size: 10px;
+    }
+
+    .theory_active {
+        height: 50px;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .slider_element {
+        height: 40px;
+        font-size: 6px;
+    }
+
+    .own_theory_title {
+        font-size: 20px;
+    }
+
+    .theory_active {
+        height: 40px;
+    }
+
+    .theory_active:after {
+        left: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+    }
+
+    .own_theory_text {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 5px;
+    }
+
+    .own_theory_data {
+        margin-top: 20px;
+    }
+
+
+}
+
+
+@media screen and (max-width:370px) {
+    .slider_element {
+        height: 20px;
+        font-size: 4px;
+    }
+
+    .theory_active {
+        height: 20px;
+    }
+
+    .theory_active:after {
+        left: calc(50% - 2.5px);
+        width: 5px;
+        height: 5px;
+    }
+
+    .own_theory_text {
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .own_theory_text {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .own_theory_data {
+        margin-top: 20px;
+    }
+}
+
 
 /* ======================= END THEORY ======================= */
 
@@ -493,7 +689,8 @@
 
 @media screen and (max-width:970px) {
     .schedule_data {
-        margin: 70px 120px 0 120px;
+        margin: 50px 120px 0 120px;
+        grid-template-columns: 50% 10px 50%;
     }
 
     .schedule_data .own_element {
@@ -514,15 +711,21 @@
     }
 
     .schedule_data .circle {
-        margin-top: 12px;
+        margin-top: 16px;
+        height: 10px;
+        width: 10px;
     }
 
     .schedule_data .circle::before {
         height: 20px;
+        width: 3px;
+        right: calc(50% - 1.5px);
     }
 
     .schedule_data .circle::after {
         height: 85px;
+        width: 3px;
+        right: calc(50% - 1.5px);
     }
 
 }
@@ -530,7 +733,7 @@
 
 @media screen and (max-width:720px) {
     .schedule_data {
-        margin: 70px 20px 0 20px;
+        margin: 30px 20px 0 20px;
     }
 
     .schedule_data .own_element {
@@ -542,7 +745,7 @@
 @media screen and (max-width:500px) {
     .schedule_data {
         margin: 0 auto;
-        margin-top: 70px;
+        margin-top: 20px;
     }
 
     .schedule_data .own_element {
@@ -559,11 +762,11 @@
 
     .schedule_data .description {
         font-size: 8px;
-        line-height: 20px;
+        line-height: 12px;
     }
 
     .schedule_data .circle {
-        margin-top: 9px;
+        margin-top: 13px;
     }
 
     .schedule_data .circle::before {
@@ -572,7 +775,7 @@
     }
 
     .schedule_data .circle::after {
-        height: 35px;
+        height: 38px;
         width: 3px;
     }
 }
@@ -582,7 +785,7 @@
 
 
 
-/* ======================= START PARTNERSHIP ======================= */
+/* ======================= START TICKETS ======================= */
 @media screen and (max-width:1200px) {
     .input_field {
         width: 350px;
@@ -599,19 +802,36 @@
 }
 
 @media screen and (max-width:970px) {
-
-    .tickets_text,
-    .tickets_description {
-        width: 80%;
-    }
-
     .tickets_data {
         display: block;
     }
 
-    .tickets_price_description {
-        width: 50%;
+    .tickets_info {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 50% 50%;
+        gap: 40px 0;
+        grid-template-areas:
+            "tickets_cost tickets_price_description"
+            "tickets_description tickets_description";
     }
+
+    .tickets_price_description {
+        grid-area: tickets_price_description;
+    }
+
+    .tickets_description {
+        grid-area: tickets_description;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .tickets_cost {
+        grid-area: tickets_cost;
+        height: 100px;
+        margin: auto;
+    }
+
 
     .credentials {
         display: flex;
@@ -622,32 +842,49 @@
     .tickets_cost {
         padding: 18px 56px;
         border-radius: 100px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .tickets_price_description .price_title {
         font-size: 20px;
-        line-height: 24px;
+    }
+
+    .tickets_price_description ol {
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width:500px) {
+    .tickets_info {
+        display: block;
+    }
+
     .tickets_text {
         font-size: 16px;
     }
 
     .tickets_description {
-        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
     }
 
     .input_field,
     .credential_button {
         width: 90%;
+        padding: 18px 0 18px 10px;
     }
 
     .tickets_price_description {
-        width: 90%;
+        width: 80%;
         font-size: 18px;
+        line-height: 20px;
     }
 
     .tickets_cost {
-        padding: 10px 56px;
+        margin: 0 auto;
+
         border-radius: 100px;
         font-size: 16px;
         line-height: 20px;
@@ -656,15 +893,35 @@
     .credentials_title {
         text-align: center;
     }
+
+    input::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    input::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    input:-moz-placeholder {
+        font-size: 16px;
+    }
+
+    input:-ms-input-placeholder {
+        font-size: 16px;
+    }
 }
 
-/* ======================= END PARTNERSHIP ======================= */
+/* ======================= END TICKETS ======================= */
 
 
 
 
 /* ======================= START BECOME PARTNER ======================= */
 @media screen and (max-width:1100px) {
+
+    .own_partner_sentence {
+        border-radius: 32px;
+    }
 
     .own_partner_sentence .title {
         font-size: 28px;
@@ -698,7 +955,10 @@
 
     .become_partner_data {
         display: block;
+    }
 
+    .own_partner_sentence .title {
+        font-size: 24px;
     }
 
     .own_partner_sentence {
@@ -706,19 +966,30 @@
         margin: 0 auto;
         padding-bottom: 15px;
         margin-bottom: 15px;
+        border-radius: 57px;
     }
 
 
     .own_partner_sentence .title {
         font-size: 24px;
         height: 70px;
+        line-height: 28px;
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:550px) {
+    .own_partner_sentence .title {
+        font-size: 20px;
+        line-height: 24px;
+    }
 
     .own_partner_sentence {
         width: 100%;
+        border-radius: 32px;
+    }
+
+    .own_partner_sentence .send_request {
+        font-size: 14px;
     }
 
 }
@@ -731,6 +1002,9 @@
 
 /* ======================= START MAP ======================= */
 @media screen and (max-width:1000px) {
+    .map_data {
+        margin-top: 60px;
+    }
 
     .map_info {
         right: 1%;
@@ -738,11 +1012,14 @@
 }
 
 @media screen and (max-width:920px) {
+    .map_data {
+        margin-top: 40px;
+    }
 
     .map_image {
         background: url('./../img/map_min.png') no-repeat;
         border-radius: 48px;
-        height: 90vh;
+        height: 780px;
         width: 500px;
         margin: 0 auto;
     }
@@ -756,10 +1033,12 @@
 }
 
 @media screen and (max-width:550px) {
+    .map_data {
+        margin-top: 20px;
+    }
 
     .map_image {
         width: 100%;
-        height: 70vh;
         border-radius: 38px;
     }
 
@@ -803,6 +1082,7 @@
 
 @media screen and (max-width:950px) {
     .photo_list {
+        margin-top: 60px;
         grid-template-rows: 75px 75px 75px 200px;
         gap: 16px 16px;
     }
@@ -814,6 +1094,7 @@
 
 @media screen and (max-width:750px) {
     .photo_list {
+        margin-top: 50px;
         grid-template-rows: 60px 60px 60px 160px;
         gap: 8px 8px;
     }
@@ -877,6 +1158,7 @@
 
 @media screen and (max-width:500px) {
     .photo_list {
+        margin-top: 40px;
         grid-template-rows: 48px 48px 48px 128px;
         gap: 4px 4px;
     }
@@ -939,6 +1221,7 @@
 
 @media screen and (max-width:350px) {
     .photo_list {
+        margin-top: 30px;
         grid-template-rows: 38px 38px 38px 82px;
         gap: 4px 4px;
     }
@@ -972,6 +1255,7 @@
 @media screen and (max-width:850px) {
     .question_text {
         display: block;
+        margin-top: 60px;
     }
 
     .question_text .left_text,
@@ -983,6 +1267,10 @@
 }
 
 @media screen and (max-width:500px) {
+    .question_text {
+        margin-top: 40px;
+    }
+
     .question_text .left_text .question_title {
         font-size: 16px;
         line-height: 16px;
@@ -1102,200 +1390,3 @@
 
 
 /* ======================= END FOOTER ======================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:1400px) {
-
-    /* theory */
-    .own_theory_image {
-        width: 534px;
-        height: 510px;
-    }
-}
-
-
-@media screen and (max-width:1300px) {
-
-    /* theory */
-    .own_theory_image {
-        width: 454px;
-        height: 430px;
-    }
-}
-
-
-@media screen and (max-width:1200px) {
-
-
-    /* theory */
-    .theory_text {
-        width: 100%;
-        font-size: 18px;
-        /* line-height: 123.02%; */
-    }
-
-    .slider_element {
-        height: 70px;
-        font-size: 12px;
-    }
-
-    .theory_active {
-        height: 70px;
-    }
-
-    .own_theory_title {
-        font-size: 32px;
-    }
-
-    .own_theory_text {
-        width: 480px;
-        font-size: 14px;
-    }
-
-    .own_theory_image {
-        width: 384px;
-        height: 360px;
-    }
-}
-
-
-@media screen and (max-width:1070px) {
-    /* theory */
-
-    .own_theory_text {
-        width: 400px;
-        font-size: 14px;
-    }
-
-    .own_theory_image {
-        width: 344px;
-        height: 320px;
-    }
-
-}
-
-
-@media screen and (max-width:970px) {
-
-    /* theory */
-    .own_theory_text {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .own_theory_left_data {
-        display: block;
-    }
-
-    .left_data_image {
-        display: block;
-        margin: 10px auto;
-    }
-
-    .own_theory_image {
-        display: none;
-    }
-
-    .own_theory_title {
-        margin-top: 20px;
-    }
-
-    .slider_element {
-        height: 50px;
-        font-size: 10px;
-    }
-
-    .theory_active {
-        height: 50px;
-    }
-}
-
-
-@media screen and (max-width:700px) {
-
-
-    /* theory */
-    .theory_text {
-        font-size: 14px;
-    }
-
-    .slider_element {
-        height: 40px;
-        font-size: 6px;
-    }
-
-    .own_theory_title {
-        font-size: 20px;
-    }
-
-    .theory_active {
-        height: 40px;
-    }
-
-    .theory_active:after {
-        left: calc(50% - 5px);
-        width: 10px;
-        height: 10px;
-    }
-
-    .own_theory_text {
-        font-size: 12px;
-        line-height: 16px;
-        margin-top: 5px;
-    }
-
-}
-
-
-@media screen and (max-width:370px) {
-
-    /* theory */
-    .theory_text {
-        font-size: 12px;
-    }
-
-    .slider_element {
-        height: 20px;
-        font-size: 4px;
-    }
-
-    .theory_active {
-        height: 20px;
-    }
-
-    .theory_active:after {
-        left: calc(50% - 2.5px);
-        width: 5px;
-        height: 5px;
-    }
-
-    .own_theory_text {
-        font-size: 10px;
-        line-height: 20px;
-    }
-
-    .own_theory_text {
-        font-size: 10px;
-        line-height: 12px;
-    }
-
-}

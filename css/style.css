@@ -693,7 +693,11 @@ input[id="radio-7"]:checked~.theory_active {
     justify-content: space-between;
 }
 
-
+.tickets_info{
+    display: flex;
+    flex-direction: column;
+    align-items:space-around;
+}
 .tickets_block {
     margin: 0 auto;
 }
@@ -723,7 +727,7 @@ input[id="radio-7"]:checked~.theory_active {
     line-height: 29px;
 }
 
-.tickets_price_description .title {
+.tickets_price_description .price_title {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
