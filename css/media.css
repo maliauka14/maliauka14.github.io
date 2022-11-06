@@ -1,56 +1,38 @@
-/* header {display: none;} */
-/*вроде готово*/
-
-/* .intro {
+.description {
     display: none;
-} */
+}
 
-/* .description {
+.theory {
     display: none;
-} */
-
-/* .theory {
-    display: none;
-} */
+}
 
 .speakers {
     display: none;
 }
 
-/* .schedule {
+.schedule {
     display: none;
-} */
+}
 
-/* .tickets {
+.tickets {
     display: none;
-} */
+}
 
 .partnership {
     display: none;
 }
 
-/* .become_partner {
+.become_partner {
     display: none;
-} */
+}
 
-/* .map {
+.map {
     display: none;
-} */
+}
 
-/* .photo {
+.photo {
     display: none;
-} */
-
-/* .questions {
-    display: none;
-} */
-
-/* .footer {
-    display: none;
-} */
-
-
-
+}
 
 
 /* ======================= START HEADER ======================= */
@@ -172,15 +154,38 @@
 }
 
 @media screen and (max-width:500px) {
+    header{
+        padding-top: 10px;
+    }
+
     .logo_upper_text {
         line-height: 16px;
     }
-        
+
     .logo_img {
         position: absolute;
         right: -64px;
         width: 70px;
         height: 44px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .logo_lower_text {
+        font-size: 6px;
+    }
+
+    .logo_upper_text {
+        line-height: 10px;
+        font-size: 10px;
+    }
+
+    .logo_img {
+        position: absolute;
+        right: -48px;
+        top: 10px;
+        width: 56px;
+        height: 35px;
     }
 }
 
@@ -190,45 +195,46 @@
 
 /* ======================= START INTRO ======================= */
 @media screen and (max-width:1200px) {
-    .intro_title{
+    .intro_title {
         font-size: 42px;
     }
 
-    .intro_date{
+    .intro_date {
         font-size: 28px;
     }
 
-    .intro_subtitle{
+    .intro_subtitle {
         font-size: 18px;
     }
 
-    .intro_button{
+    .intro_button {
         padding: 22px 78px;
         font-size: 20px;
     }
 }
 
 @media screen and (max-width:970px) {
-    .intro{
-        background: #dedede
+    .intro {
+        background: #dedede;
+        height: 800px;
     }
 
-    .intro_title{
+    .intro_title {
         font-size: 36px;
         line-height: 40px;
         width: 100%;
     }
 
-    .intro_date{
+    .intro_date {
         font-size: 24px;
     }
 
-    .intro_subtitle{
+    .intro_subtitle {
         font-size: 16px;
         width: 80%;
     }
 
-    .intro_button{
+    .intro_button {
         padding: 20px 74px;
         font-size: 18px;
     }
@@ -236,57 +242,59 @@
 
 @media screen and (max-width:780px) {
 
-    .intro_title{
+    .intro_title {
         font-size: 30px;
         line-height: 36px;
         width: 100%;
     }
 
-    .intro_date{
+    .intro_date {
         font-size: 20px;
     }
 
-    .intro_subtitle{
+    .intro_subtitle {
         font-size: 14px;
-        width:100%;
+        width: 100%;
     }
 
-    .intro_button{
+    .intro_button {
         padding: 18px 70px;
         font-size: 16px;
     }
 
-    .organizator_logo{
+    .organizator_logo {
         width: 48px;
         height: 48px;
     }
 
-    .organizator_name{
+    .organizator_name {
         font-size: 14px;
     }
 }
 
-@media screen and (max-width:500px) {
-    /* .intro{
-        background: #fefefe
-    } */
+@media screen and (max-width:550px) {
+    .intro{
+        background: #fefefe;
+        height: 600px;
+    }
 
-    .intro_title{
+    .intro_title {
+        margin-top: 140px;
         font-size: 26px;
         line-height: 28px;
         text-align: center;
     }
 
-    .intro_date{
+    .intro_date {
         font-size: 20px;
     }
 
-    .intro_subtitle{
+    .intro_subtitle {
         font-size: 12px;
         text-align: center;
     }
 
-    .intro_button{
+    .intro_button {
         padding: 12px 56px;
         width: 80%;
         font-size: 12px;
@@ -296,14 +304,38 @@
         text-align: center;
     }
 
-    .organizators{
+    .organizators {
         display: block;
+        margin-top: 80px;
     }
 
-    .organizator{
+    .organizator {
         margin-bottom: 10px;
     }
 }
+
+@media screen and (max-width:550px) {
+    .intro_title {
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .intro_date {
+        font-size: 16px;
+    }
+
+    .intro_subtitle {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .intro_button {
+        padding: 12px 0;
+    }
+
+}
+
 
 /* ======================= END INTRO ======================= */
 
@@ -923,11 +955,11 @@
 
 /* ======================= START QUESTIONS ======================= */
 @media screen and (max-width:1200px) {
-    .question_text .left_text .title {
+    .question_text .left_text .question_title {
         font-size: 32px;
     }
 
-    .question_text .left_text .subtitle {
+    .question_text .left_text .question_subtitle {
         font-size: 22px;
     }
 
@@ -950,13 +982,13 @@
     }
 }
 
-@media screen and (max-width:450px) {
-    .question_text .left_text .title {
+@media screen and (max-width:500px) {
+    .question_text .left_text .question_title {
         font-size: 16px;
         line-height: 16px;
     }
 
-    .question_text .left_text .subtitle {
+    .question_text .left_text .question_subtitle {
         font-size: 14px;
         line-height: 16px;
     }
@@ -1170,11 +1202,11 @@
         font-size: 14px;
     }
 
-    .own_theory_left_data{
+    .own_theory_left_data {
         display: block;
     }
 
-    .left_data_image{   
+    .left_data_image {
         display: block;
         margin: 10px auto;
     }
@@ -1183,7 +1215,7 @@
         display: none;
     }
 
-    .own_theory_title{
+    .own_theory_title {
         margin-top: 20px;
     }
 
@@ -1211,9 +1243,10 @@
         font-size: 6px;
     }
 
-    .own_theory_title{
+    .own_theory_title {
         font-size: 20px;
     }
+
     .theory_active {
         height: 40px;
     }
@@ -1224,7 +1257,7 @@
         height: 10px;
     }
 
-    .own_theory_text{
+    .own_theory_text {
         font-size: 12px;
         line-height: 16px;
         margin-top: 5px;
@@ -1255,12 +1288,12 @@
         height: 5px;
     }
 
-    .own_theory_text{
+    .own_theory_text {
         font-size: 10px;
         line-height: 20px;
     }
 
-    .own_theory_text{
+    .own_theory_text {
         font-size: 10px;
         line-height: 12px;
     }

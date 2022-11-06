@@ -3,17 +3,41 @@
 }
 
 body {
-    color: #1D1C1B;
+    color:#1E1C1B;
     font-family: 'Montserrat Alternates', sans-serif;
     background-color: #e9e7e2;
     font-style: normal;
     /* min-width: 1864px; */
 }
 
-h2 {
+.wrapper {
+    max-width: 1360px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.title {
     font-weight: 600;
     font-size: 40px;
     line-height: 49px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.subtitle{
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 930px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 123.02%;
+    text-align: center;
+}
+
+.divider{
+    padding-bottom: 90px;
+    border-bottom: 1px solid #CCD3C4;
 }
 
 .wrapper {
@@ -100,10 +124,6 @@ header {
     position: relative;
 }
 
-.logo_text {
-    color: #000;
-}
-
 .logo_lower_text {
     font-weight: 300;
     font-size: 12px;
@@ -134,9 +154,9 @@ header {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: #1D1C1B;
     cursor: pointer;
     text-decoration: none;
+    color: #1E1C1B;
 }
 
 .nav_element:hover {
@@ -155,7 +175,7 @@ header {
 
 .nav_element_button:hover {
     background-color: #fff;
-    color: #1D1C1B
+    color: #1E1C1B
 }
 
 
@@ -176,7 +196,6 @@ header {
     font-weight: 600;
     font-size: 48px;
     line-height: 59px;
-    color: #000;
 }
 
 .intro_date {
@@ -189,7 +208,6 @@ header {
     font-weight: 400;
     font-size: 20px;
     line-height: 123.02%;
-    color: #1E1C1B;
 }
 
 .intro_button {
@@ -202,7 +220,7 @@ header {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: #1E1D1C;
+    color: #1E1C1B;
     cursor: pointer;
 }
 
@@ -240,26 +258,16 @@ header {
 
 /* ==================== START DESCRIPTION ====================*/
 
-.description_title {
-    margin-top: 100px;
-    text-align: center;
-    color: #1E1C1B;
-}
-
 .description_text {
+    margin-left: 0;
     width: 600px;
-    margin-top: 46px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 123.02%;
-    color: #1E1C1B;
+    text-align: left;
 }
 
 .description_data {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1px solid #ddd;
 }
 
 .left_data {
@@ -284,7 +292,7 @@ header {
 
 
 .description_element:nth-child(3n) {
-    margin-bottom: 120px;
+    margin-bottom: 0;
 }
 
 .element_number {
@@ -302,7 +310,6 @@ header {
     font-weight: 400;
     font-size: 24px;
     line-height: 123.02%;
-    color: #1E1C1B;
 }
 
 
@@ -311,27 +318,6 @@ header {
 
 
 /* ==================== START THEORY ====================*/
-
-
-.theory_title {
-    margin-top: 65px;
-    text-align: center;
-    color: #2C2C2C;
-}
-
-.theory_text {
-    margin: 0 auto;
-    margin-top: 30px;
-    text-align: center;
-    width: 965px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 123.02%;
-    text-align: center;
-    color: #2C2C2C;
-}
-
-
 .theory_slider_buttons {
     display: flex;
     position: relative;
@@ -376,17 +362,6 @@ input[type="radio"] {
 .slider_element_first-child {
     border-radius: 100px 0px 0px 100px;
 }
-
-.slider_element:last-child:hover {
-    background: #ECF2E5;
-    border-radius: 0px 100px 100px 0px;
-}
-
-.slider_element:first-child:hover {
-    background: #ECF2E5;
-    border-radius: 100px 0px 0px 100px;
-}
-
 
 input[id="radio-1"]:checked~.theory_active {
     transform: translateX(0);
@@ -445,8 +420,6 @@ input[id="radio-7"]:checked~.theory_active {
     margin-top: 67px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 90px;
-    border-bottom: 1px solid #CCD3C4;
 }
 
 .fade-in {
@@ -509,7 +482,6 @@ input[id="radio-7"]:checked~.theory_active {
 
 .own_theory_title {
     margin-top: 100px;
-    color: #2C2C2C;
     font-weight: 500;
     font-size: 40px;
     line-height: 49px;
@@ -522,7 +494,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-weight: 500;
     font-size: 16px;
     line-height: 145.52%;
-    color: #2C2C2C;
 }
 
 .own_theory_image {
@@ -546,31 +517,10 @@ input[id="radio-7"]:checked~.theory_active {
 
 
 /* ==================== START SPEAKERS ====================*/
-
-.speakers_title {
-    margin-top: 100px;
-    color: #2C2C2C;
-    text-align: center;
-}
-
-.speakers_text {
-    width: 930px;
-    margin: 0 auto;
-    margin-top: 26px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 123.02%;
-    text-align: center;
-    color: #2C2C2C;
-}
-
 .slider {
     align-items: center;
     margin-top: 56px;
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 90px;
-    border-bottom: 1px solid #CCD3C4;
 }
 
 .slider_data_list {
@@ -593,8 +543,7 @@ input[id="radio-7"]:checked~.theory_active {
 
 
 .own_speaker_image {
-    width: 277px;
-    height: 277px;
+    width: 90%;
     display: block;
     margin: 0 auto;
 }
@@ -605,7 +554,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-size: 20px;
     line-height: 123.02%;
     text-align: center;
-    color: #1E1C1B;
 }
 
 .speaker_profession {
@@ -625,7 +573,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-size: 14px;
     line-height: 123.02%;
     text-align: center;
-    color: #1E1C1B;
 }
 
 
@@ -635,16 +582,8 @@ input[id="radio-7"]:checked~.theory_active {
 
 /* ==================== START SCHEDULE ====================*/
 
-.schedule_title {
-    margin-top: 100px;
-    color: #2C2C2C;
-    text-align: center;
-}
-
 .schedule_data {
     margin: 70px 110px 0 110px;
-    padding-bottom: 160px;
-    border-bottom: 1px solid #CCD3C4;
     display: grid;
     grid-template-columns: 50% 20px 50%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -671,7 +610,6 @@ input[id="radio-7"]:checked~.theory_active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #2C2C2C;
     font-weight: 500;
     margin-bottom: 75px;
 }
@@ -689,7 +627,7 @@ input[id="radio-7"]:checked~.theory_active {
     height: 2px;
     width: 100%;
     z-index: -1;
-    background-color: #000;
+    background-color: #1E1C1B;
 }
 
 .schedule_data .circle {
@@ -710,7 +648,7 @@ input[id="radio-7"]:checked~.theory_active {
     height: 40px;
     width: 5px;
     z-index: -1;
-    background-color: #000;
+    background-color: #1E1C1B;
 }
 
 .schedule_data .circle::after {
@@ -721,7 +659,7 @@ input[id="radio-7"]:checked~.theory_active {
     height: 125px;
     width: 5px;
     z-index: -1;
-    background-color: #000;
+    background-color: #1E1C1B;
 }
 
 
@@ -730,7 +668,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-    color: #2C2C2C;
     position: relative;
 }
 
@@ -740,7 +677,7 @@ input[id="radio-7"]:checked~.theory_active {
     right: 100%;
     height: 2px;
     width: 100%;
-    background-color: #000;
+    background-color: #1E1C1B;
     z-index: -1;
 }
 
@@ -750,28 +687,9 @@ input[id="radio-7"]:checked~.theory_active {
 
 /* ==================== START TICKETS ====================*/
 
-.tickets_title {
-    margin-top: 100px;
-    text-align: center;
-}
-
-.tickets_text {
-    width: 930px;
-    margin: 0 auto;
-    margin-top: 30px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 123.02%;
-    text-align: center;
-    color: #2C2C2C;
-}
-
-
 .tickets_data {
     display: flex;
     margin-top: 60px;
-    padding-bottom: 90px;
-    border-bottom: 1px solid #CCD3C4;
     justify-content: space-between;
 }
 
@@ -789,7 +707,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-    color: #2C2C2C;
 }
 
 .tickets_sum {
@@ -804,13 +721,13 @@ input[id="radio-7"]:checked~.theory_active {
     font-weight: 400;
     font-size: 20px;
     line-height: 29px;
-    color: #2C2C2C;
 }
 
 .tickets_price_description .title {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .tickets_price_description ol {
@@ -825,7 +742,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-size: 20px;
     line-height: 123.02%;
     letter-spacing: -0.013em;
-    color: #2C2C2C;
 }
 
 
@@ -835,7 +751,6 @@ input[id="radio-7"]:checked~.theory_active {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
-    color: #2C2C2C;
 }
 
 .input_field {
@@ -862,7 +777,7 @@ input[id="radio-7"]:checked~.theory_active {
     margin-top: 40px;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder{
     font-family: 'Montserrat Alternates';
     font-style: normal;
     font-weight: 500;
@@ -896,7 +811,6 @@ input:-ms-input-placeholder {
     font-size: 20px;
     line-height: 24px;
     color: #4D4949;
-
 }
 
 .credential_button {
@@ -905,7 +819,6 @@ input:-ms-input-placeholder {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-    color: #1E1D1C;
     background: #DEB47D;
     border-radius: 100px;
     cursor: pointer;
@@ -930,12 +843,6 @@ input:-ms-input-placeholder {
 
 /* ==================== START PARTNERSHIP ====================*/
 
-.partnership_title {
-    margin-top: 100px;
-    text-align: center;
-    color: #2C2C2C;
-}
-
 .own_partner {
     height: 150px;
 }
@@ -953,27 +860,8 @@ input:-ms-input-placeholder {
 
 /* ==================== START BECOME_PARTNER ====================*/
 
-.become_partner_title {
-    margin-top: 100px;
-    text-align: center;
-    color: #2C2C2C;
-}
-
-.become_partner_text {
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 930px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 123.02%;
-    text-align: center;
-    color: #2C2C2C;
-}
-
 .become_partner_data {
     margin-top: 70px;
-    padding-bottom: 90px;
-    border-bottom: 1px solid #CCD3C4;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -995,10 +883,10 @@ input:-ms-input-placeholder {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #1E1C1B;
-    background: #FFFFFF;
+    background: #fff;
     box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.25);
     border-radius: 100px;
+    margin: 0;
 }
 
 
@@ -1007,7 +895,6 @@ input:-ms-input-placeholder {
     font-weight: 400;
     font-size: 14px;
     line-height: 123.02%;
-    color: #1E1C1B;
 }
 
 .own_partner_sentence .line {
@@ -1032,7 +919,6 @@ input:-ms-input-placeholder {
     line-height: 24px;
     display: block;
     margin: 0 auto;
-    color: #1E1D1C;
     margin-top: 25px;
     margin-bottom: 50px;
     cursor: pointer;
@@ -1057,18 +943,9 @@ input:-ms-input-placeholder {
 
 
 /* ==================== START MAP ====================*/
-
-.map_title {
-    color: #2C2C2C;
-    text-align: center;
-    margin-top: 100px;
-}
-
 .map_data {
     margin: 0 auto;
     margin-top: 80px;
-    padding-bottom: 90px;
-    border-bottom: 1px solid #CCD3C4;
 }
 
 .map_image {
@@ -1109,7 +986,6 @@ input:-ms-input-placeholder {
     font-size: 16px;
     line-height: 98.9%;
     text-align: center;
-    color: #1E1C1B;
 }
 
 .map_info .place_phone {
@@ -1118,7 +994,6 @@ input:-ms-input-placeholder {
     font-size: 14px;
     line-height: 98.9%;
     text-align: center;
-    color: #1E1C1B;
 }
 
 .map_info .place_time {
@@ -1127,7 +1002,6 @@ input:-ms-input-placeholder {
     font-size: 14px;
     line-height: 98.9%;
     text-align: center;
-    color: #1E1C1B;
 }
 
 /* ==================== END MAP ====================*/
@@ -1136,16 +1010,9 @@ input:-ms-input-placeholder {
 
 /* ==================== START PHOTO ====================*/
 
-.photo_title {
-    margin-top: 100px;
-    text-align: center;
-}
-
 .photo_list {
     margin: 0 auto;
     margin-top: 80px;
-    padding-bottom: 85px;
-    border-bottom: 1px solid #CCD3C4;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-rows: 148px 148px 148px 390px;
@@ -1278,14 +1145,14 @@ input:-ms-input-placeholder {
     margin-left: 20px;
 }
 
-.question_text .left_text .title {
+.question_text .left_text .question_title {
     font-weight: 600;
     font-size: 40px;
     line-height: 49px;
     color: #535650;
 }
 
-.question_text .left_text .subtitle {
+.question_text .left_text .question_subtitle {
     font-weight: 600;
     font-size: 28px;
     line-height: 34px;
@@ -1297,7 +1164,6 @@ input:-ms-input-placeholder {
     font-weight: 500;
     font-size: 16px;
     line-height: 98.9%;
-    color: #1E1C1B;
 }
 
 .supervisor {
@@ -1306,7 +1172,6 @@ input:-ms-input-placeholder {
     font-size: 16px;
     line-height: 142.9%;
     text-align: center;
-    color: #1E1C1B;
 }
 
 /* ==================== END QUESTIONS ====================*/
@@ -1350,7 +1215,7 @@ footer {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    color: #1E1C1B;
     margin-bottom: 20px;
 }
 
@@ -1516,13 +1381,6 @@ footer {
     display: none;
 }
 
-/* .preloader__percents {
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-} */
-
-
 @keyframes ldio-lrl29zh6csj {
     0% {
         transform: rotate(0)
@@ -1595,7 +1453,6 @@ footer {
     transform: translateZ(0) scale(1);
     backface-visibility: hidden;
     transform-origin: 0 0;
-    /* see note above */
 }
 
 .ldio-lrl29zh6csj div {
