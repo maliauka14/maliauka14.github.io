@@ -3,7 +3,7 @@
 }
 
 body {
-    color:#1E1C1B;
+    color: #1E1C1B;
     font-family: 'Montserrat Alternates', sans-serif;
     background-color: #e9e7e2;
     font-style: normal;
@@ -24,7 +24,7 @@ body {
     margin-top: 100px;
 }
 
-.subtitle{
+.subtitle {
     margin: 0 auto;
     margin-top: 30px;
     text-align: center;
@@ -35,7 +35,7 @@ body {
     text-align: center;
 }
 
-.divider{
+.divider {
     padding-bottom: 90px;
     border-bottom: 1px solid #CCD3C4;
 }
@@ -693,17 +693,18 @@ input[id="radio-7"]:checked~.theory_active {
     justify-content: space-between;
 }
 
-.tickets_info{
+.tickets_info {
     display: flex;
     flex-direction: column;
-    align-items:space-around;
+    align-items: space-around;
 }
+
 .tickets_block {
     margin: 0 auto;
 }
 
 .tickets_cost {
-    display: inline-block;
+    width: 400px;
     padding: 23px 54px;
     background: #FFFFFF;
     border: 4px solid #CCD3C4;
@@ -711,6 +712,7 @@ input[id="radio-7"]:checked~.theory_active {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
+    box-sizing: border-box;
 }
 
 .tickets_sum {
@@ -779,7 +781,7 @@ input[id="radio-7"]:checked~.theory_active {
     margin-top: 40px;
 }
 
-input::-webkit-input-placeholder{
+input::-webkit-input-placeholder {
     font-family: 'Montserrat Alternates';
     font-style: normal;
     font-weight: 500;
@@ -924,7 +926,7 @@ input:-ms-input-placeholder {
     margin-bottom: 50px;
     cursor: pointer;
     width: 80%;
-    color:#1E1C1B;
+    color: #1E1C1B;
 }
 
 .own_partner_sentence .send_request:hover {
@@ -1200,7 +1202,7 @@ footer {
     margin-right: 95px;
 }
 
-.column:last-child{
+.column:last-child {
     margin-right: 0;
 }
 

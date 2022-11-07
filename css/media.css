@@ -798,6 +798,7 @@
         grid-area: tickets_cost;
         height: 100px;
         margin: auto;
+        width: 90%;
     }
 
 
@@ -1009,6 +1010,12 @@
 }
 
 @media screen and (max-width:550px) {
+    .modal_dialog{
+        margin: 0 10px;
+        border-radius: 35px;
+        padding: 20px
+    }
+
     .own_partner_sentence .title {
         font-size: 20px;
         line-height: 24px;
