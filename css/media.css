@@ -1,18 +1,10 @@
-.speakers {
+/* .tickets {
     display: none;
-}
+} */
 
-.partnership {
-    display: none;
-}
-
-.tickets{
-    display: none;
-}
-
-.schedule {
-    display: none;
-}
+    /* .schedule {
+        display: none;
+    } */
 
 /* ======================= START CONST ======================= */
 @media screen and (max-width:1200px) {
@@ -314,7 +306,7 @@
 @media screen and (max-width:550px) {
     .intro {
         background: #fefefe;
-        height: 700px;
+        height: 750px;
     }
 
     .intro_title {
@@ -818,6 +810,8 @@
 
     .tickets_price_description {
         grid-area: tickets_price_description;
+        width: 100%;
+        margin-left: 0;
     }
 
     .tickets_description {
@@ -914,6 +908,69 @@
 /* ======================= END TICKETS ======================= */
 
 
+/* ======================= START PARTNERSHIP ======================= */
+@media screen and (max-width:970px) {
+    .slider_left_arrow {
+        display: none;
+    }
+
+    .slider_rigth_arrow {
+        display: none;
+    }
+
+    .speaker_description {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .slider {
+        margin-top: 40px;
+    }
+
+    .speaker_name {
+        font-size: 16px;
+    }
+
+    .speaker_profession {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .slider {
+        margin-top: 30px;
+    }
+
+    .speaker_name {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .speaker_profession {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .slider {
+        margin-top: 20px;
+    }
+
+    .speaker_name {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .speaker_profession {
+        font-size: 8px;
+        margin-top: 5px;
+    }
+}
+
+
+/* ======================= END PARTNERSHIP ======================= */
 
 
 /* ======================= START BECOME PARTNER ======================= */
@@ -955,6 +1012,7 @@
 
     .become_partner_data {
         display: block;
+        margin-top: 50px;
     }
 
     .own_partner_sentence .title {
@@ -981,6 +1039,10 @@
     .own_partner_sentence .title {
         font-size: 20px;
         line-height: 24px;
+    }
+
+    .become_partner_data {
+        margin-top: 30px;
     }
 
     .own_partner_sentence {
@@ -1040,6 +1102,7 @@
     .map_image {
         width: 100%;
         border-radius: 38px;
+        height: 650px;
     }
 
     .map_info {

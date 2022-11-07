@@ -734,9 +734,7 @@ input[id="radio-7"]:checked~.theory_active {
     margin-top: 0;
 }
 
-.tickets_price_description ol {
-    list-style-position: outside;
-}
+
 
 .tickets_description {
     margin-left: 52px;
@@ -847,13 +845,12 @@ input:-ms-input-placeholder {
 
 /* ==================== START PARTNERSHIP ====================*/
 
-.own_partner {
-    height: 150px;
-}
+
 
 .own_partner .partner_logo {
     display: block;
     margin: 0 auto;
+    width: 95%;
 }
 
 
