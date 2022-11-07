@@ -12,26 +12,6 @@ window.onload = function () {
 
 window.addEventListener('DOMContentLoaded', function () {
 
-    //preloader
-
-    // const mediaFiles = document.querySelectorAll('img, video');
-    // let i = 0
-    // document.body.style.overflow = 'hidden';
-    // Array.from(mediaFiles).forEach((file, index) => {
-    //     file.onload = () => {
-    //         i++
-    //         percents.innerHTML = ((i * 100) / mediaFiles.length).toFixed(1)
-
-    //         if (i === mediaFiles.length - 2) {
-    //             document.body.style.overflow = '';
-    //             preloader.classList.add('preloader--hide')
-    //             percents.innerHTML = 100
-    //         }
-    //     }
-    // })
-
-
-
     //buttons
 
     const buttons = document.querySelectorAll(".slider_element"),
@@ -47,6 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
     let activeButton = buttons[0];
     activeButton.style['pointer-events'] = 'none';
     activeButton.style['font-weight'] = '700';
+    
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
             activeArticle.style.display = 'none';

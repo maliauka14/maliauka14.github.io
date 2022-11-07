@@ -924,6 +924,7 @@ input:-ms-input-placeholder {
     margin-bottom: 50px;
     cursor: pointer;
     width: 80%;
+    color:#1E1C1B;
 }
 
 .own_partner_sentence .send_request:hover {
