@@ -150,7 +150,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        background-color: black;
+        background: linear-gradient(90deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.6) 75%,rgba(0,0,0,.4) 100%);
         opacity: 0.8;
         z-index: 10;
     }
@@ -243,7 +243,7 @@
 
 @media screen and (max-width:970px) {
     .intro {
-        background: #dedede;
+        background: url('./../img/background/фон\ title_background_tablet.png') center/cover no-repeat;
         height: 1000px;
     }
 
@@ -259,7 +259,7 @@
 
     .intro_subtitle {
         font-size: 16px;
-        width: 80%;
+        width: 60%;
     }
 
     .intro_button {
@@ -282,7 +282,7 @@
 
     .intro_subtitle {
         font-size: 14px;
-        width: 100%;
+        width: 80%;
     }
 
     .intro_button {
@@ -302,7 +302,7 @@
 
 @media screen and (max-width:550px) {
     .intro {
-        background: #fefefe;
+        background: url('./../img/background/title_background.png')  left/cover no-repeat;
         height: 750px;
     }
 
@@ -318,8 +318,8 @@
     }
 
     .intro_subtitle {
-        font-size: 12px;
         text-align: center;
+        width: 95%;
     }
 
     .intro_button {
@@ -354,7 +354,6 @@
     }
 
     .intro_subtitle {
-        font-size: 10px;
         text-align: center;
     }
 
@@ -372,10 +371,6 @@
         font-size: 34px;
     }
 
-    .description_text {
-        font-size: 18px;
-    }
-
     .element_text {
         font-size: 18px;
     }
@@ -385,14 +380,13 @@
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:970px) {
     .description_data {
         display: block;
     }
 
     .description_text {
         width: 100%;
-        font-size: 18px;
         text-align: center;
     }
 
@@ -421,10 +415,6 @@
         font-size: 28px;
     }
 
-    .description_text {
-        font-size: 18px;
-    }
-
     .element_text {
         font-size: 14px;
     }
@@ -444,10 +434,6 @@
     h2 {
         line-height: 28px;
         font-size: 20px;
-    }
-
-    .description_text {
-        font-size: 14px;
     }
 
     .element_text {
@@ -563,7 +549,7 @@
     }
 
     .own_theory_title {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .theory_active {
@@ -708,6 +694,14 @@
     .schedule_data .own_element {
         margin-bottom: 40px;
     }
+    
+    .schedule_data .time::after {
+        height: 1.5px;
+    }
+
+    .schedule_data .description::before{
+        height: 1.5px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -745,6 +739,14 @@
     .schedule_data .circle::after {
         height: 38px;
         width: 3px;
+    }
+
+    .schedule_data .time::after {
+        height: 1px;
+    }
+
+    .schedule_data .description::before{
+        height: 1px;
     }
 }
 /* ======================= END SCHEDULE ======================= */
@@ -799,6 +801,11 @@
         height: 100px;
         margin: auto;
         width: 90%;
+        padding: 23px 0;
+        text-align: center;
+        border-radius: 100px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
 
@@ -808,15 +815,9 @@
         align-items: center;
     }
 
-    .tickets_cost {
-        padding: 18px 56px;
-        border-radius: 100px;
-        font-size: 16px;
-        line-height: 20px;
-    }
 
     .tickets_price_description .price_title {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .tickets_price_description ol {
@@ -853,7 +854,6 @@
 
     .tickets_cost {
         margin: 0 auto;
-
         border-radius: 100px;
         font-size: 16px;
         line-height: 20px;
@@ -861,22 +861,23 @@
 
     .credentials_title {
         text-align: center;
+        font-size: 18px;
     }
 
     input::-webkit-input-placeholder {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     input::-moz-placeholder {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     input:-moz-placeholder {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     input:-ms-input-placeholder {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 /* ======================= END TICKETS ======================= */
@@ -1057,7 +1058,7 @@
     }
 
     .map_image {
-        background: url('./../img/map_min.png') no-repeat;
+        background: url('./../img/map_min.png') center/cover no-repeat;
         border-radius: 48px;
         height: 780px;
         width: 500px;
