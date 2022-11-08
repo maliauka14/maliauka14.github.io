@@ -568,7 +568,7 @@ input[id="radio-7"]:checked~.theory_active {
 .speaker_description {
     margin: 0 auto;
     margin-top: 12px;
-    width: 277px;
+    width: 95%;
     font-weight: 400;
     font-size: 14px;
     line-height: 123.02%;
